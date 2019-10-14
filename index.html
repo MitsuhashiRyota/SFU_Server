@@ -101,7 +101,7 @@
   }
   
   function getDeviceStream(option) {
-    if ('getUserMedia' in navigator.mediaDevices) {
+    if (navigator.mediaDevices) {
       console.log('navigator.mediaDevices.getUserMadia');
       return navigator.mediaDevices.getUserMedia(option);
     }
